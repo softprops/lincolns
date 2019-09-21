@@ -45,3 +45,15 @@ jobs:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./target/doc
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    runs-on: ubuntu-latest
+    needs: [codestyle, lint, compile]
+    steps:
+      - name: Set up Rust
+        uses: hecrj/setup-rust-action@v1
+      - uses: actions/checkout@master
+      - name: Publish
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: bash
+        run: cargo publish --token ${{ secrets.CRATES_TOKEN }}
