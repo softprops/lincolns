@@ -5,9 +5,9 @@
   lincolns
 </h1>
 
-<div align="center">
+<p align="center">
    A JSON Pointer index for line/column information within JSON and YAML content
-</div>
+</p>
 
 <div align="center">
   <a href="https://github.com/softprops/lincolns/actions">
