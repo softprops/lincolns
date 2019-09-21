@@ -1,4 +1,4 @@
-//! Provides a [JSON Pointer](https://tools.ietf.org/html/rfc6901) lookup of line/column information within JSON and YAML content
+//! A [JSON Pointer](https://tools.ietf.org/html/rfc6901) index for line/column information within JSON and YAML content
 //!
 //! # Example
 //!
