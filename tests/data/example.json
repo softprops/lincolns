@@ -1,0 +1,18 @@
+{
+  "test": [
+    {
+      "foo": "hi",
+      "bar": true
+    },
+    {
+      "foo":"there",
+      "bar": false
+    },
+    {
+       "nested": {
+          "foo": "by",
+          "bar": 1
+       }
+    }
+  ]
+}

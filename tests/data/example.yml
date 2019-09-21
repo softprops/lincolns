@@ -1,0 +1,8 @@
+test:
+  - foo: "hi"
+    bar: false
+  - foo: "there"
+    bar: true
+  - nested:
+      foo: "by"
+      bar: 1
