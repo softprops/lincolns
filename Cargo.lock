@@ -50,7 +50,7 @@ version = "0.2.62"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
-name = "lincol"
+name = "lincolns"
 version = "0.1.0"
 dependencies = [
  "structopt 0.3.2 (registry+https://github.com/rust-lang/crates.io-index)",

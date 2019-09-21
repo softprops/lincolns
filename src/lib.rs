@@ -6,9 +6,9 @@
 //! that can be queried by JSON Pointer paths
 //!
 //! ```rust,edition2018
-//! use lincol::{from_str, Position};
+//! use lincolns::{from_str, Position};
 //!
-//! # fn main() -> lincol::Result<()>  {
+//! # fn main() -> lincolns::Result<()>  {
 //! let positions = from_str(
 //! r#"foo:
 //!     - bar: baz
@@ -131,7 +131,7 @@ impl Positions {
 
     fn next(&mut self) -> Option<(Event, Position)> {
         self.events.clone().get(self.pos).map(|event| {
-            self.pos = self.pos + 1;
+            self.pos += 1;
             //println!("next {:?}", event);
             (event.clone().0, event.1.into())
         })
@@ -185,7 +185,7 @@ impl Positions {
                 Event::MappingStart => {
                     self.collect_map(&Path::Seq {
                         parent: &path,
-                        index: index,
+                        index,
                     });
                     self.collect_seq(index + 1, &path);
                 }
