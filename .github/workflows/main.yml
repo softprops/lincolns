@@ -32,9 +32,26 @@ jobs:
       - uses: actions/checkout@master
       - run: cargo check --all
 
+  test:
+    needs: [codestyle, lint, compile]
+    strategy:
+      matrix:
+        rust: [stable, beta, nightly]
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Setup Rust
+      uses: hecrj/setup-rust-action@v1
+      with:
+        rust-version: ${{ matrix.rust }}
+    - name: Checkout
+      uses: actions/checkout@v1
+    - name: Test
+      run: cargo test --verbose
+
   publish-docs:
     runs-on: ubuntu-latest
-    needs: [codestyle, lint, compile]
+    needs: [test]
     steps:
       - name: Set up Rust
         uses: hecrj/setup-rust-action@v1
@@ -46,9 +63,9 @@ jobs:
           PUBLISH_DIR: ./target/doc
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  publish:
+  publish-crate:
     runs-on: ubuntu-latest
-    needs: [codestyle, lint, compile]
+    needs: [test]
     steps:
       - name: Set up Rust
         uses: hecrj/setup-rust-action@v1
