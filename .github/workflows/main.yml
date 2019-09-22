@@ -67,7 +67,7 @@ jobs:
           PUBLISH_DIR: ./target/doc
           PERSONAL_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
         with:
-          emptyCommits: false
+          emptyCommits: true
 
   publish-crate:
     runs-on: ubuntu-latest
