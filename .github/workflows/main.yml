@@ -60,11 +60,14 @@ jobs:
         shell: bash
         run: cargo doc
       - name: Publish
+        if: github.ref == 'refs/heads/master'
         uses: docker://peaceiris/gh-pages:v2.3.1
         env:
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./target/doc
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+        with:
+          emptyCommits: false
 
   publish-crate:
     runs-on: ubuntu-latest
