@@ -20,16 +20,16 @@
 
 <br />
 
-## install
+## 📦 install
 
-Add the following to your `Cargo.toml` file
+Add the following to your `Cargo.toml` file's `[dependencies]` heading
 
 ```toml
 [dependencies]
 lincolns = "0.1"
 ```
 
-## usage
+## 🤸 usage
 
 Lincolns exposes two sets of operations: one to load YAML/JSON content into an index for lookup and one to perform the lookup
 
@@ -48,5 +48,9 @@ fn main() -> Result<(), Box<dyn Error>> {
 ```
 
 That's it.
+
+## 🤔 lincolns?
+
+lin(e and )col(umn)n(umber)s
 
 Doug Tangren (softprops) 2019
