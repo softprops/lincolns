@@ -34,7 +34,7 @@ lincolns = "0.1"
 Lincolns exposes two sets of operations: one to load YAML/JSON content into an index for lookup and one to perform the lookup
 
 ```rust
-use lincolns::{from_str, Position}
+use lincolns::Position;
 use std::error::Error;
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -50,7 +50,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 If you care to see what JSON pointer paths are available you can iterate over them using `iter`
 
 ```rust
-use lincolns::{from_str, Position}
+use lincolns::from_str;
 use std::error::Error;
 
 fn main() -> Result<(), Box<dyn Error>> {
