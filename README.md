@@ -14,7 +14,7 @@
     <img src="https://github.com/softprops/lincolns/workflows/Main/badge.svg"/>
   </a>
   <a href="LICENSE">
-    <img src="(http://meritbadge.herokuapp.com/lincolns"/>
+    <img src="http://meritbadge.herokuapp.com/lincolns"/>
   </a>
   <a href="http://docs.rs/lincolns">
     <img src="https://docs.rs/lincolns/badge.svg"/>
