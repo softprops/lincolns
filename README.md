@@ -13,7 +13,7 @@
   <a href="https://github.com/softprops/lincolns/actions">
     <img src="https://github.com/softprops/lincolns/workflows/Main/badge.svg"/>
   </a>
-  <a href="https://crates.io/lincolns">
+  <a href="https://crates.io/crates/lincolns">
     <img src="http://meritbadge.herokuapp.com/lincolns"/>
   </a>
   <a href="http://docs.rs/lincolns">
