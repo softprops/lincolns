@@ -43,7 +43,21 @@ fn main() -> Result<(), Box<dyn Error>> {
       "{:#?}",
       from_str("path/to/file.yml")?.get("/path/to/field")
     )
-  );
+  )
+}
+```
+
+If you care to see what JSON pointer paths are available you can iterate over them using `iter`
+
+```rust
+use lincolns::{from_str, Position}
+use std::error::Error;
+
+fn main() -> Result<(), Box<dyn Error>> {
+  for (ptr, pos) in from_str("path/to/file.yml")?.iter() {
+    println!("{} => {:?}", ptr, pos);
+  }
+  Ok(())
 }
 ```
 
