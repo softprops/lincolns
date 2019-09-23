@@ -13,8 +13,17 @@
   <a href="https://github.com/softprops/lincolns/actions">
     <img src="https://github.com/softprops/lincolns/workflows/Main/badge.svg"/>
   </a>
+  <a href="LICENSE">
+    <img src="(http://meritbadge.herokuapp.com/lincolns"/>
+  </a>
+  <a href="http://docs.rs/lincolns">
+    <img src="https://docs.rs/lincolns/badge.svg"/>
+  </a>
   <a href="https://softprops.github.io/lincolns">
-    <img src="https://img.shields.io/badge/docs-master-green.svg"/>
+   <img src="https://img.shields.io/badge/docs-master-green.svg"/>
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-brightgreen.svg"/>
   </a>
 </div>
 
