@@ -1,4 +1,5 @@
 use crate::Path;
+use log::debug;
 use std::collections::BTreeMap;
 use yaml_rust::{
     parser::{Event as YamlEvent, MarkedEventReceiver},
@@ -94,7 +95,7 @@ impl Positions {
                     self.collect_map(path);
                     self.collect(path);
                 }
-                other => println!("unhandled {:?} in collect", other),
+                other => debug!("unhandled {:?} in collect", other),
             }
         }
     }
@@ -127,7 +128,7 @@ impl Positions {
                     });
                     self.collect_seq(index + 1, &path);
                 }
-                other => println!("unhandled {:?} in collect_seq", other),
+                other => debug!("unhandled {:?} in collect_seq", other),
             }
         }
     }
@@ -156,7 +157,7 @@ impl Positions {
                     }
                     self.collect_map(&path);
                 }
-                other => println!("unhandled {:?} in collect_map", other),
+                other => debug!("unhandled {:?} in collect_map", other),
             }
         }
     }

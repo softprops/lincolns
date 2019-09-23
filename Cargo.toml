@@ -9,6 +9,7 @@ license = "MIT"
 
 [dependencies]
 yaml-rust = "0.4"
+log = "0.4"
 
 [dev-dependencies]
 structopt = "0.3"
