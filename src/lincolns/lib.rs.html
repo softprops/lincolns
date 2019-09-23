@@ -96,7 +96,9 @@
 <span id="96">96</span>
 <span id="97">97</span>
 <span id="98">98</span>
+<span id="99">99</span>
 </pre><div class="example-wrap"><pre class="rust ">
+<span class="attribute">#![<span class="ident">deny</span>(<span class="ident">intra_doc_link_resolution_failure</span>)]</span>
 <span class="doccomment">//! A [JSON Pointer](https://tools.ietf.org/html/rfc6901) index for line/column information within JSON and YAML content</span>
 <span class="doccomment">//!</span>
 <span class="doccomment">//! # Example</span>
@@ -139,7 +141,7 @@
 <span class="kw">use</span> <span class="ident">std</span>::<span class="ident">io</span>::<span class="ident">Read</span>;
 <span class="kw">use</span> <span class="ident">yaml_rust</span>::<span class="ident">parser</span>::<span class="ident">Parser</span>;
 
-<span class="doccomment">/// Load a lookup table of `Position` information</span>
+<span class="doccomment">/// Load a lookup table of [`Position`](struct.Position.html) information</span>
 <span class="doccomment">/// from utf8 text</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">from_str</span><span class="op">&lt;</span><span class="ident">S</span><span class="op">&gt;</span>(<span class="ident">s</span>: <span class="ident">S</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">Positions</span><span class="op">&gt;</span>
 <span class="kw">where</span>
@@ -152,7 +154,7 @@
     <span class="prelude-val">Ok</span>(<span class="ident">positions</span>)
 }
 
-<span class="doccomment">/// Load a lookup table of `Position` information from a type which implements</span>
+<span class="doccomment">/// Load a lookup table of [`Position`](struct.Position.html) information from a type which implements</span>
 <span class="doccomment">/// `Read`</span>
 <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">from_reader</span><span class="op">&lt;</span><span class="ident">R</span><span class="op">&gt;</span>(<span class="kw-2">mut</span> <span class="ident">rdr</span>: <span class="ident">R</span>) <span class="op">-&gt;</span> <span class="prelude-ty">Result</span><span class="op">&lt;</span><span class="ident">Positions</span><span class="op">&gt;</span>
 <span class="kw">where</span>

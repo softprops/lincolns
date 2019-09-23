@@ -187,11 +187,6 @@
 <span id="187">187</span>
 <span id="188">188</span>
 <span id="189">189</span>
-<span id="190">190</span>
-<span id="191">191</span>
-<span id="192">192</span>
-<span id="193">193</span>
-<span id="194">194</span>
 </pre><div class="example-wrap"><pre class="rust ">
 <span class="kw">use</span> <span class="kw">crate</span>::<span class="ident">Path</span>;
 <span class="kw">use</span> <span class="ident">log</span>::<span class="ident">debug</span>;
@@ -235,7 +230,7 @@
     }
 }
 
-<span class="doccomment">/// A table of [Position](struct.Position.html) information</span>
+<span class="doccomment">/// A table of [`Position`](struct.Position.html) information</span>
 <span class="kw">pub</span> <span class="kw">struct</span> <span class="ident">Positions</span> {
     <span class="ident">pos</span>: <span class="ident">usize</span>,
     <span class="ident">events</span>: <span class="ident">Vec</span><span class="op">&lt;</span>(<span class="ident">Event</span>, <span class="ident">Marker</span>)<span class="op">&gt;</span>,
@@ -243,15 +238,10 @@
 }
 
 <span class="kw">impl</span> <span class="ident">Positions</span> {
-    <span class="doccomment">/// Gets a yaml fields position within a document given its JSON Pointer path</span>
+    <span class="doccomment">/// Gets a yaml field&#39;s position within a document given its JSON Pointer path</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// JSON Pointer defines a string syntax for identifying a specific value</span>
     <span class="doccomment">/// within a JavaScript Object Notation (JSON) document.</span>
-    <span class="doccomment">///</span>
-    <span class="doccomment">/// A Pointer is a Unicode string with the reference tokens separated by `/`.</span>
-    <span class="doccomment">/// Inside tokens `/` is replaced by `~1` and `~` is replaced by `~0`. The</span>
-    <span class="doccomment">/// addressed value is returned and if there is no such value `None` is</span>
-    <span class="doccomment">/// returned.</span>
     <span class="doccomment">///</span>
     <span class="doccomment">/// For more information read [RFC6901](https://tools.ietf.org/html/rfc6901).</span>
     <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">get</span><span class="op">&lt;</span><span class="ident">P</span><span class="op">&gt;</span>(
