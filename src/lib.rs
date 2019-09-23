@@ -1,3 +1,4 @@
+#![deny(intra_doc_link_resolution_failure)]
 //! A [JSON Pointer](https://tools.ietf.org/html/rfc6901) index for line/column information within JSON and YAML content
 //!
 //! # Example
@@ -40,7 +41,7 @@ pub use position::{Position, Positions};
 use std::io::Read;
 use yaml_rust::parser::Parser;
 
-/// Load a lookup table of `Position` information
+/// Load a lookup table of [`Position`](struct.Position.html) information
 /// from utf8 text
 pub fn from_str<S>(s: S) -> Result<Positions>
 where
@@ -53,7 +54,7 @@ where
     Ok(positions)
 }
 
-/// Load a lookup table of `Position` information from a type which implements
+/// Load a lookup table of [`Position`](struct.Position.html) information from a type which implements
 /// `Read`
 pub fn from_reader<R>(mut rdr: R) -> Result<Positions>
 where

@@ -40,7 +40,7 @@ impl Default for Positions {
     }
 }
 
-/// A table of [Position](struct.Position.html) information
+/// A table of [`Position`](struct.Position.html) information
 pub struct Positions {
     pos: usize,
     events: Vec<(Event, Marker)>,
@@ -48,15 +48,10 @@ pub struct Positions {
 }
 
 impl Positions {
-    /// Gets a yaml fields position within a document given its JSON Pointer path
+    /// Gets a yaml field's position within a document given its JSON Pointer path
     ///
     /// JSON Pointer defines a string syntax for identifying a specific value
     /// within a JavaScript Object Notation (JSON) document.
-    ///
-    /// A Pointer is a Unicode string with the reference tokens separated by `/`.
-    /// Inside tokens `/` is replaced by `~1` and `~` is replaced by `~0`. The
-    /// addressed value is returned and if there is no such value `None` is
-    /// returned.
     ///
     /// For more information read [RFC6901](https://tools.ietf.org/html/rfc6901).
     pub fn get<P>(
