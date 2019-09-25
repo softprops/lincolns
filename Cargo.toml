@@ -5,6 +5,7 @@ authors = ["softprops <d.tangren@gmail.com>"]
 edition = "2018"
 description = "A JSON Pointer index for line/column information within JSON and YAML content"
 license = "MIT"
+readme = "README.md"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
