@@ -6,6 +6,9 @@ edition = "2018"
 description = "A JSON Pointer index for line/column information within JSON and YAML content"
 license = "MIT"
 readme = "README.md"
+documentation = "https://docs.rs/lincolns"
+homepage = "https://github.com/softprops/lincolns"
+repository = "https://github.com/softprops/lincolns"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
